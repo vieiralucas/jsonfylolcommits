@@ -1,0 +1,33 @@
+{
+  "name": "jsonfylolcommits",
+  "version": "1.0.0",
+  "description": "\"A cli tool to convert all your lolcommits photos to base64 and add them to a json output file.\"",
+  "main": "jsonfylolcommits.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vieiralucas/jsonfylolcommits.git"
+  },
+  "keywords": [
+    "json",
+    "lolcommits",
+    "lol",
+    "commits",
+    "lol-commits",
+    "cli",
+    "tool",
+    "convert",
+    "photos",
+    "base64"
+  ],
+  "author": "Lucas Vieira <vieiralucas4@gmail.com> (http://vieiralucas.github.io/)",
+  "license": "GPL-3.0+",
+  "bugs": {
+    "url": "https://github.com/vieiralucas/jsonfylolcommits/issues"
+  },
+  "homepage": "https://github.com/vieiralucas/jsonfylolcommits",
+  "preferGlobal": "true",
+  "bin": {"jsonfylolcommits": "./jsonfylolcommits.js"}
+}

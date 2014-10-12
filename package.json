@@ -1,6 +1,6 @@
 {
   "name": "jsonfylolcommits",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "A cli tool to convert all your lolcommits photos to base64 and add them to a json output file.",
   "main": "jsonfylolcommits.js",
   "scripts": {

@@ -4,7 +4,7 @@ var fs             = require('fs'),
     path           = require('path'),
     homedir        = (process.platform === 'win32') ? process.env.HOMEPATH : process.env.HOME,
     lolcommitsdir  = homedir + '/.lolcommits',
-    jsonData       = {},
+    jsonData       = [],
     outputFilePath = process.argv[2];
 
 
@@ -29,8 +29,10 @@ function loopThroughFiles(dir) {
 }
 
 function base64(filePath) {
-    var file = fs.readFileSync(filePath)
-    jsonData[path.basename(filePath).replace('.jpg', '')] = file.toString('base64');
+    var file = fs.readFileSync(filePath),
+        json = {};
+    json[path.basename(filePath).replace('.jpg', '')] = file.toString('base64');
+    jsonData.push(json);
 }
 
 function writeFile() {

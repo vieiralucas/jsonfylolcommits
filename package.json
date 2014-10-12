@@ -1,7 +1,7 @@
 {
   "name": "jsonfylolcommits",
-  "version": "1.0.0",
-  "description": "\"A cli tool to convert all your lolcommits photos to base64 and add them to a json output file.\"",
+  "version": "0.0.1",
+  "description": "A cli tool to convert all your lolcommits photos to base64 and add them to a json output file.",
   "main": "jsonfylolcommits.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

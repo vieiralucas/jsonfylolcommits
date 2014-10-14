@@ -4,6 +4,7 @@ var fs             = require('fs'),
     path           = require('path'),
     colors         = require('colors'),
     commander      = require('commander'),
+    prompt         = require('prompt'),
     homedir        = (process.platform === 'win32') ? process.env.HOMEPATH : process.env.HOME,
     lolcommitsdir  = homedir + '/.lolcommits',
     jsonData       = [];
@@ -26,10 +27,25 @@ commander.parse(process.argv);
 
 var outputFilePath = commander.args[0];
 if(typeof(outputFilePath) == 'undefined') {
-    commander.help();
+    prompt.message = '';
+    prompt.delimiter = '';
+    var schema = {
+        properties: {
+            output: {
+                description: "Path to the output file: ",
+                default: homedir + "/.lolcommits/jsoncommits.json",
+            }
+        }
+    }
+    prompt.start();
+    prompt.get(schema, function (err, result) {
+        outputFilePath = result.output;
+        loopThroughFiles(lolcommitsdir);
+    });
+} else {
+    loopThroughFiles(lolcommitsdir);
 }
 
-loopThroughFiles(lolcommitsdir);
 
 
 // recursive walk through file tree

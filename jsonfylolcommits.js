@@ -12,7 +12,7 @@ var fs             = require('fs'),
 var finished = 0, total = 0;
 
 commander
-  .version('1.0.0')
+  .version('1.1.1')
   .option('-q, --quiet', 'run without feedback')
 
 commander.on('--help', function(){
